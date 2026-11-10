@@ -160,10 +160,40 @@ CUSTOM_CSS = """
         color: #E2E8F0;
     }
 
+    /* Insight Cards */
+    .insight-card {
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin-bottom: 12px;
+        border: 1px solid var(--border-accent);
+    }
+    .insight-success { border-left: 4px solid var(--success); background: rgba(16,185,129,0.07); }
+    .insight-warning { border-left: 4px solid var(--warning); background: rgba(245,158,11,0.07); }
+    .insight-danger  { border-left: 4px solid var(--danger);  background: rgba(239,68,68,0.07); }
+    .insight-info    { border-left: 4px solid var(--primary);  background: rgba(99,102,241,0.07); }
+
     /* Sidebar Navigation Enhancement */
     [data-testid="stSidebar"] {
         background-color: #0D1322;
         border-right: 1px solid var(--border-subtle);
+    }
+
+    /* Section header typography */
+    h2, h3 { letter-spacing: -0.01em; }
+
+    /* Streamlit metric cards overrides */
+    [data-testid="stMetric"] {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-accent);
+        border-radius: 10px;
+        padding: 14px 18px;
+    }
+    [data-testid="stMetricValue"] { color: #FFFFFF; }
+    [data-testid="stMetricLabel"] {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
 </style>
 """
@@ -253,9 +283,9 @@ with st.sidebar:
 
     st.subheader("Display & Mode")
     layman_mode = st.toggle(
-        "💬 Plain English (Layman Mode)",
+        "✨ Smart Summaries",
         value=True,
-        help="Translates complex metrics into everyday human takeaways and $100 rule breakdowns.",
+        help="Shows plain-English context cards alongside charts — what the numbers mean for you, not just what they are.",
     )
 
     st.subheader("Data & Preferences")
@@ -368,7 +398,7 @@ def fmt(amt: float) -> str:
     return format_currency(amt, cur_sym)
 
 
-# Precompute Global Financial Metrics & Layman Intelligence
+# Precompute Global Financial Metrics & Smart Intelligence Report
 kpis = calculate_financial_kpis(df)
 behavior_profile = build_spending_behavior_profile(df)
 shifts_obj = analyze_spending_shifts(df, currency_symbol=cur_sym)
@@ -412,12 +442,12 @@ with col_head_right:
     btn_col1, btn_col2 = st.columns(2)
     with btn_col1:
         st.download_button(
-            label="📥 Print / PDF Briefing",
+            label="📥 Download Briefing (PDF)",
             data=html_briefing,
             file_name=f"SpendScope_Briefing_{active_filename}.html",
             mime="text/html",
             use_container_width=True,
-            help="Download clean print-ready HTML briefing that opens in any browser and prints to PDF (Ctrl+P / Cmd+P).",
+            help="Download a print-ready HTML report. Open in browser and use Ctrl+P / Cmd+P to save as PDF.",
         )
     with btn_col2:
         if st.button("💾 Archive Snapshot", use_container_width=True, help="Preserve current analysis state in local SQLite database."):
@@ -439,7 +469,7 @@ if "Overview" in page:
     behavior_profile = build_spending_behavior_profile(df)
     comp = behavior_profile.composition
 
-    # Layman Mode: Intuitive Financial Health Scorecard & $100 Breakdown
+    # Smart Summaries: Intuitive Financial Health Scorecard & $100 Breakdown
     if layman_mode:
         sc = layman_rep.health_scorecard
         hd = layman_rep.hundred_dollar_split
@@ -463,13 +493,13 @@ if "Overview" in page:
                         </div>
                     </div>
                     <div style="background: rgba(99, 102, 241, 0.15); border: 1px solid #6366F1; padding: 8px 14px; border-radius: 8px; font-size: 0.82rem; color: #C7D2FE;">
-                        💬 <b>Layman Mode:</b> Everyday explanations active
+                        ✨ <b>Smart Summaries</b> active
                     </div>
                 </div>
 
                 <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
                     <div style="font-size: 0.88rem; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">
-                        💵 The $100 Rule: Where Every {cur_sym}100 You Earn Actually Goes
+                        Where Every {cur_sym}100 You Earn Actually Goes
                     </div>
                     <div style="font-size: 0.84rem; color: #CBD5E1; margin-bottom: 10px;">
                         {hd.summary_text}
@@ -493,7 +523,7 @@ if "Overview" in page:
         )
 
         # 4 Evaluation Pillars
-        with st.expander("🔍 Click to view the 4 Pillars of your Financial Health Score (Evaluation Details)"):
+        with st.expander("View the 4 Pillars behind your Health Score"):
             pillar_cols = st.columns(4)
             for idx, p in enumerate(sc.pillars):
                 with pillar_cols[idx]:
@@ -511,8 +541,8 @@ if "Overview" in page:
                         unsafe_allow_html=True,
                     )
 
-        # Top Human Takeaways
-        st.subheader("💡 The Bottom Line (Key Financial Takeaways)")
+        # Top Smart Takeaways
+        st.subheader("What This Means For You")
         t_c1, t_c2 = st.columns(2)
         takeaways_to_show = layman_rep.top_takeaways[:4]
         for idx, t in enumerate(takeaways_to_show):
@@ -677,7 +707,7 @@ elif "Behaviour" in page:
         st.markdown(
             f"""
             <div style="background: rgba(99, 102, 241, 0.12); border-left: 4px solid #6366F1; border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px;">
-                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 6px;">💬 What This Means for Everyday Life:</div>
+                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 6px;">In plain terms:</div>
                 <div style="color: #CBD5E1; font-size: 0.88rem; line-height: 1.55;">
                     • <b>Your Core Habit:</b> {layman_rep.top_habit_summary}<br>
                     • <b>Weekend Factor:</b> On Saturdays and Sundays, you spend an average of <b>{fmt(ww.avg_daily_weekend)}/day</b>, which is <b>{ww.weekend_intensity_ratio:.1f}x higher</b> than workdays ({fmt(ww.avg_daily_weekday)}/day). Most weekend money went to <b>{ww.top_weekend_category}</b>.<br>
@@ -871,7 +901,7 @@ elif "Shifts" in page:
                 st.markdown(
                     f"""
                     <div style="background: rgba(99, 102, 241, 0.12); border-left: 4px solid #6366F1; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 14px 0 18px 0;">
-                        <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">💬 Plain English Shift Summary:</div>
+                        <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">Monthly Change Summary:</div>
                         <div style="color: #CBD5E1; font-size: 0.88rem; line-height: 1.55;">
                             In <b>{shift.curr_month}</b>, you spent <b>{fmt(abs(shift.net_expense_change))} {more_less}</b> ({shift.pct_expense_change:+.1f}%) compared to {shift.prev_month}.<br>
                             • <b>Main Spending Surge:</b> <b>{top_exp}</b> increased by {top_exp_amt}.<br>
@@ -1017,7 +1047,7 @@ elif "Unusual" in page:
         st.markdown(
             f"""
             <div style="background: rgba(99, 102, 241, 0.12); border-left: 4px solid #6366F1; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0;">
-                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">💬 How to Understand These Outliers:</div>
+                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">How to understand these alerts:</div>
                 <div style="color: #CBD5E1; font-size: 0.88rem; line-height: 1.55;">
                     {layman_rep.outlier_plain_summary}
                 </div>
@@ -1092,9 +1122,9 @@ elif "Outlook" in page:
         st.markdown(
             f"""
             <div style="background: rgba(99, 102, 241, 0.12); border-left: 4px solid #6366F1; border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px;">
-                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">💬 What to Plan For Next Month:</div>
+                <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem; margin-bottom: 4px;">What to plan for next month:</div>
                 <div style="color: #CBD5E1; font-size: 0.88rem; line-height: 1.55;">
-                    • <b>Next Month Spending:</b> {layman_rep.outlook_plain_summary}<br>
+                    • <b>Projected Spending:</b> {layman_rep.outlook_plain_summary}<br>
                     • <b>Automatic Bills & Subscriptions:</b> {layman_rep.subscription_plain_summary}
                 </div>
             </div>

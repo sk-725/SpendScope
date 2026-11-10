@@ -303,8 +303,8 @@ def generate_layman_report(
     # Redundancy count
     red_count = len(recurring_leakage.redundancies) if recurring_leakage and recurring_leakage.redundancies else 0
 
-    # Anomalous spend percentage
-    anom_pct = anom_summary.anomalous_spend_pct if anom_summary else 0.0
+    # Anomalous spend percentage — use anomaly_percentage field (% of transactions flagged)
+    anom_pct = anom_summary.anomaly_percentage if anom_summary else 0.0
 
     # 1. Health Scorecard
     scorecard = compute_financial_health_score(
@@ -625,7 +625,7 @@ def generate_executive_html_briefing(
     <div class="container">
         <div class="header">
             <div>
-                <div class="brand">💳 SpendScope <span class="badge">Layman Executive Briefing</span></div>
+                <div class="brand">💳 SpendScope <span class="badge">Executive Briefing</span></div>
                 <div style="font-size: 0.85rem; color: #94A3B8; margin-top: 4px;">Statement: <b>{statement_name}</b> • Period: {date_range_str}</div>
             </div>
             <div class="no-print">
