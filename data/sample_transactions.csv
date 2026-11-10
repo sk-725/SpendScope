@@ -1,0 +1,146 @@
+date,description,amount,type
+2023-11-01,TechCorp Salary Direct Deposit,4500.00,income
+2023-11-01,Highland Apartments Monthly Rent,1750.00,expense
+2023-11-02,Trader Joe's Groceries,86.42,expense
+2023-11-03,iCloud Storage Subscription,2.99,expense
+2023-11-03,Starbucks Coffee #1042,6.75,expense
+2023-11-05,Shell Oil Gas Station,48.20,expense
+2023-11-07,Netflix.com Monthly Subscription,15.99,expense
+2023-11-08,Chipotle Mexican Grill,14.85,expense
+2023-11-10,Whole Foods Market,112.30,expense
+2023-11-11,Uber *Trip 4921,24.50,expense
+2023-11-12,Spotify USA Monthly Sub,10.99,expense
+2023-11-14,Amazon.com*Order 9021,34.99,expense
+2023-11-15,TechCorp Salary Direct Deposit,4500.00,income
+2023-11-15,CVS Pharmacy #382,28.40,expense
+2023-11-16,Shake Shack Burger,18.50,expense
+2023-11-18,Planet Fitness Gym Membership,24.99,expense
+2023-11-19,Target Superstore,67.80,expense
+2023-11-20,ConEdison Electric & Gas Utility,124.60,expense
+2023-11-22,Subway Sandwich Shop,11.25,expense
+2023-11-24,Comcast Xfinity Internet,79.99,expense
+2023-11-25,Costco Wholesale Groceries,215.40,expense
+2023-11-27,Chevron Fuel Station,52.10,expense
+2023-11-28,Uber Eats Food Delivery,32.40,expense
+2023-11-29,Starbucks Coffee #1042,7.20,expense
+2023-11-30,Freelance Web Consulting Payment,850.00,income
+2023-12-01,Highland Apartments Monthly Rent,1750.00,expense
+2023-12-01,TechCorp Salary Direct Deposit,4500.00,income
+2023-12-02,Trader Joe's Groceries,94.15,expense
+2023-12-03,iCloud Storage Subscription,2.99,expense
+2023-12-04,Starbucks Coffee #1042,6.50,expense
+2023-12-05,Shell Oil Gas Station,45.30,expense
+2023-12-07,Netflix.com Monthly Subscription,15.99,expense
+2023-12-09,MTA MetroCard Refill,34.00,expense
+2023-12-10,Whole Foods Market,128.75,expense
+2023-12-11,DoorDash Food Delivery,29.80,expense
+2023-12-12,Spotify USA Monthly Sub,10.99,expense
+2023-12-13,Best Buy Electronics,89.99,expense
+2023-12-15,TechCorp Salary Direct Deposit,4500.00,income
+2023-12-16,Chipotle Mexican Grill,15.40,expense
+2023-12-18,Planet Fitness Gym Membership,24.99,expense
+2023-12-18,Apple Store Downtown - MacBook Pro M3,2499.00,expense
+2023-12-19,Target Holiday Shopping,142.60,expense
+2023-12-20,ConEdison Electric & Gas Utility,138.20,expense
+2023-12-22,Walgreens Pharmacy,22.15,expense
+2023-12-24,Comcast Xfinity Internet,79.99,expense
+2023-12-26,Zara Clothing Store,119.50,expense
+2023-12-28,Shell Oil Gas Station,51.00,expense
+2023-12-29,Trader Joe's Groceries,105.80,expense
+2023-12-30,Annual Performance Bonus Acme Corp,2000.00,income
+2024-01-01,Highland Apartments Monthly Rent,1750.00,expense
+2024-01-02,TechCorp Salary Direct Deposit,4500.00,income
+2024-01-03,iCloud Storage Subscription,2.99,expense
+2024-01-03,Starbucks Coffee #1042,6.75,expense
+2024-01-05,Trader Joe's Groceries,88.90,expense
+2024-01-06,Chevron Fuel Station,49.80,expense
+2024-01-07,Netflix.com Monthly Subscription,15.99,expense
+2024-01-08,Uber *Trip 8102,19.80,expense
+2024-01-10,Whole Foods Market,115.40,expense
+2024-01-11,Subway Sandwich Shop,10.50,expense
+2024-01-12,Spotify USA Monthly Sub,10.99,expense
+2024-01-14,Amazon.com*Home Goods,45.20,expense
+2024-01-15,TechCorp Salary Direct Deposit,4500.00,income
+2024-01-16,Chipotle Mexican Grill,16.20,expense
+2024-01-18,Planet Fitness Gym Membership,24.99,expense
+2024-01-19,CVS Pharmacy #382,31.75,expense
+2024-01-20,ConEdison Electric & Gas Utility,145.10,expense
+2024-01-22,Target Superstore,74.30,expense
+2024-01-24,Comcast Xfinity Internet,79.99,expense
+2024-01-25,Costco Wholesale Groceries,198.60,expense
+2024-01-26,Shell Oil Gas Station,46.50,expense
+2024-01-28,Late Night ATM Cash Withdrawal,600.00,expense
+2024-01-29,Starbucks Coffee #1042,7.10,expense
+2024-01-30,DoorDash Food Delivery,35.20,expense
+2024-02-01,Highland Apartments Monthly Rent,1750.00,expense
+2024-02-01,TechCorp Salary Direct Deposit,4500.00,income
+2024-02-02,Trader Joe's Groceries,92.30,expense
+2024-02-03,iCloud Storage Subscription,2.99,expense
+2024-02-04,Starbucks Coffee #1042,6.75,expense
+2024-02-06,Chevron Fuel Station,53.40,expense
+2024-02-07,Netflix.com Monthly Subscription,15.99,expense
+2024-02-09,MTA MetroCard Refill,34.00,expense
+2024-02-10,Whole Foods Market,120.60,expense
+2024-02-12,Spotify USA Monthly Sub,10.99,expense
+2024-02-13,Chipotle Mexican Grill,15.90,expense
+2024-02-14,Tiffany & Co Jewelry,1280.00,expense
+2024-02-15,TechCorp Salary Direct Deposit,4500.00,income
+2024-02-16,Shake Shack Burger,19.20,expense
+2024-02-18,Planet Fitness Gym Membership,24.99,expense
+2024-02-19,Walgreens Pharmacy,24.50,expense
+2024-02-20,ConEdison Electric & Gas Utility,132.80,expense
+2024-02-22,Amazon.com*Kitchen Tools,68.40,expense
+2024-02-24,Comcast Xfinity Internet,79.99,expense
+2024-02-25,Trader Joe's Groceries,89.15,expense
+2024-02-26,Uber *Trip 1920,26.40,expense
+2024-02-27,Shell Oil Gas Station,48.90,expense
+2024-02-28,Quarterly Stock Dividend Payment,340.00,income
+2024-03-01,Highland Apartments Monthly Rent,1750.00,expense
+2024-03-01,TechCorp Salary Direct Deposit,4500.00,income
+2024-03-02,Trader Joe's Groceries,96.80,expense
+2024-03-03,iCloud Storage Subscription,2.99,expense
+2024-03-04,Starbucks Coffee #1042,6.90,expense
+2024-03-06,Shell Oil Gas Station,50.25,expense
+2024-03-07,Netflix.com Monthly Subscription,15.99,expense
+2024-03-09,Target Superstore,82.40,expense
+2024-03-10,Whole Foods Market,134.10,expense
+2024-03-11,DoorDash Food Delivery,31.50,expense
+2024-03-12,Spotify USA Monthly Sub,10.99,expense
+2024-03-14,Amazon.com*Bookstore,29.95,expense
+2024-03-15,TechCorp Salary Direct Deposit,4500.00,income
+2024-03-16,Chipotle Mexican Grill,16.50,expense
+2024-03-18,Planet Fitness Gym Membership,24.99,expense
+2024-03-19,CVS Pharmacy #382,18.90,expense
+2024-03-20,ConEdison Electric & Gas Utility,118.50,expense
+2024-03-22,Lufthansa Airlines Transatlantic Flight,1650.00,expense
+2024-03-24,Comcast Xfinity Internet,79.99,expense
+2024-03-25,Costco Wholesale Groceries,205.80,expense
+2024-03-26,Chevron Fuel Station,47.80,expense
+2024-03-28,Uber *Trip 3840,22.10,expense
+2024-03-29,Starbucks Coffee #1042,7.25,expense
+2024-03-31,Subway Sandwich Shop,11.80,expense
+2024-04-01,Highland Apartments Monthly Rent,1750.00,expense
+2024-04-01,TechCorp Salary Direct Deposit,4500.00,income
+2024-04-02,Emergency Plumbing Repair,850.00,expense
+2024-04-03,iCloud Storage Subscription,2.99,expense
+2024-04-03,Starbucks Coffee #1042,6.75,expense
+2024-04-05,Trader Joe's Groceries,91.40,expense
+2024-04-06,Shell Oil Gas Station,54.10,expense
+2024-04-07,Netflix.com Monthly Subscription,15.99,expense
+2024-04-09,MTA MetroCard Refill,34.00,expense
+2024-04-10,Whole Foods Market,127.30,expense
+2024-04-12,Spotify USA Monthly Sub,10.99,expense
+2024-04-13,Chipotle Mexican Grill,15.80,expense
+2024-04-15,TechCorp Salary Direct Deposit,4500.00,income
+2024-04-16,Shake Shack Burger,18.90,expense
+2024-04-18,Planet Fitness Gym Membership,24.99,expense
+2024-04-19,Walgreens Pharmacy,26.70,expense
+2024-04-20,ConEdison Electric & Gas Utility,112.40,expense
+2024-04-21,Target Superstore,69.50,expense
+2024-04-24,Comcast Xfinity Internet,79.99,expense
+2024-04-25,Costco Wholesale Groceries,218.40,expense
+2024-04-26,Chevron Fuel Station,51.20,expense
+2024-04-27,Uber Eats Food Delivery,34.60,expense
+2024-04-28,Starbucks Coffee #1042,7.10,expense
+2024-04-29,Best Buy Electronics,49.99,expense
+2024-04-30,IRS Federal Tax Refund Deposit,1250.00,income
